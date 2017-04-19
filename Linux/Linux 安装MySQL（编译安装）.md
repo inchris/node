@@ -2,7 +2,7 @@
 
 本次安装的mysql版本是5.6.选择从搜狐源下载，编译过程漫长。
 
-**1.下载**
+## 1.下载
 
 ```shell
 wget http://mirrors.sohu.com/mysql/MySQL-5.6/mysql-5.6.23.tar.gz
@@ -10,7 +10,7 @@ wget http://mirrors.sohu.com/mysql/MySQL-5.6/mysql-5.6.23.tar.gz
 
 ![](./media/8BA57510-A6AE-4293-98D0-490C48534AEB-1.png)
 
-**2.解压编译**
+## 2.解压编译
 
 执行如下命令:
 
@@ -25,14 +25,14 @@ make -j 2 && make install
 
 make的-j参数可以使make进行并行编译编译。我cpu的个数是2，所以指定为2.
 
-**3.添加mysql用户**
+## 3.添加mysql用户
 
 ```shell
 groupadd mysql
 useradd -s /sbin/nologin -M -g mysql mysql
 ```
 
-**4.修改配置文件**
+## 4.修改配置文件
 
 ```shell
 vim /etc/my.cnf
@@ -116,7 +116,7 @@ write_buffer = 2M
 interactive-timeout
 ```
 
-**5.初始化mysql**
+## 5.初始化mysql
 
 ```shell
 /usr/local/mysql/scripts/mysql_install_db --defaults-file=/etc/my.cnf --basedir=/usr/local/mysql --datadir=/usr/local/mysql/var --user=mysql
@@ -133,13 +133,13 @@ ldconfig
 
 ```
 
-**6.启动mysql**
+## 6.启动mysql
 
 ```shell
 /etc/init.d/mysql start
 ```
 
-**7.查看mysql进程**
+## 7.查看mysql进程
 
 ```shell
 ps -ef|grep mysql
@@ -149,7 +149,7 @@ ps -ef|grep mysql
 ![](./media/2A9DB43B-E62E-4534-82BB-CDA4A66094FB.png)
 
 
-**8.后期配置**
+## 8.后期配置
 
 ```shell
 ln -s /usr/local/mysql/lib/mysql /usr/lib/mysql
@@ -185,7 +185,7 @@ mysql -uroot -p
 
 ![2A5FF5E2-F837-4C96-AF4A-A9E5F410CB82](media/2A5FF5E2-F837-4C96-AF4A-A9E5F410CB82.png)
 
-**9.结束**
+## 9.结束
 
 至此，mysql 已经安装结束。退出到上一层目录
 
@@ -193,7 +193,7 @@ mysql -uroot -p
 cd ../
 ```
 
-**10.开机启动**
+## 10.开机启动
 
 ```shell
 chkconfig --level 345 mysqld on
