@@ -149,7 +149,29 @@ NTP服务器(上海) ：ntp.api.bz
 微软公司授时主机(美国) ：time.windows.com 
 台警大授时中心(台湾)：asia.pool.ntp.org
 
+## CPU
 
+总核数 = 物理CPU个数 X 每颗物理CPU的核数 
+
+总逻辑CPU数 = 物理CPU个数 X 每颗物理CPU的核数 X 超线程数
+
+### 查看物理CPU个数
+
+```shell
+cat /proc/cpuinfo| grep "physical id"| sort| uniq| wc -l
+```
+
+### 查看每个物理CPU中core的个数(即核数)
+
+```shell
+cat /proc/cpuinfo| grep "cpu cores"| uniq
+```
+
+### 查看逻辑CPU的个数
+
+```shell
+cat /proc/cpuinfo| grep "processor"| wc -l
+```
 
 
 
