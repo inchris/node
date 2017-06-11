@@ -41,3 +41,17 @@ eureka:
 > As described in the [docs](http://codecentric.github.io/spring-boot-admin/1.4.3/#_serviceinstanceconverter):
 
 > > If you want to customize the default conversion of services you can either add health.path, management.port and/or mangament.context-path entries to the services metadata.
+
+## Spring Boot 1.5.x Oauth2 returns 401
+
+** 暂未解决 **
+
+https://github.com/spring-projects/spring-boot/issues/8286
+
+https://stackoverflow.com/questions/42010522/moving-to-spring-boot-1-5-1-and-oauth2-jwt-token-error-401-unauthorized
+
+https://stackoverflow.com/questions/42664070/authentication-is-not-working-in-spring-boot-1-5-2-and-oauth2
+
+这个家伙遇到的问题跟我当初遇到的问题一毛一样：
+
+https://stackoverflow.com/questions/42822875/springboot-1-5-x-security-oauth2
